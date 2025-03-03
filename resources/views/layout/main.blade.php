@@ -108,7 +108,22 @@
         }
         #unggulan{
             margin-top: 20px;
+
         }
+
+        .nav-tabs .nav-link{
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .nav-tabs {
+            max-height: 300px;
+            overflow-y: auto;
+            direction: rtl;
+            scrollbar-width: thin;
+        }
+
     </style>
     <!-- script
       ================================================== -->
