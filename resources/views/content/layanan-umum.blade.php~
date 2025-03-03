@@ -1,0 +1,83 @@
+@extends('layout.main')
+
+@section('title', 'SIMRS BITRISOFT - Sistem Informasi Rumah Sakit')
+
+@section('content')
+
+
+    <div class="container mt-5">
+    <!-- Layanan Umum -->
+    <h2 class="text-center mb-4">Layanan Umum</h2>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Pencatatan Stok Alkes (Farmasi)</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Pencatatan Stok Alkes (Farmasi)</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Antrian (Display Antrian dan Pemanggilan pasien)</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Dashboard Kamar</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@endsection

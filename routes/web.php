@@ -13,10 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
+// Halaman Utama
+Route::get('/', function () {
     return view('content.home');
 })->name('home');
 
-Route::get('/unggulan', function () {
-    return view('content.unggulan');
-})->name('unggulan');
+// Fitur Unggulan
+Route::get('/fitur-unggulan', function () {
+    return view('content.feature');
+})->name('fitur-unggulan');
+
+// Fitur Lainnya
+Route::get('/fitur-lainnya', function () {
+    return view('content.feature');
+})->name('fitur-lainnya');
+
+// Modul
+Route::get('/modul', function () {
+    return view('content.modul');
+})->name('modul');
+
+// Produk Lain
+Route::get('/produk-lain', function () {
+    return view('content.produk-lain');
+})->name('produk-lain');

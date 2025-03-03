@@ -1,32 +1,179 @@
 @extends('layout.main')
 
-@section('title', 'Fitur Unggulan')
+@section('title', 'SIMRS BITRISOFT - Sistem Informasi Rumah Sakit')
 
 @section('content')
 
-    <section id="our-team" class="padding-large">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="image-holder me-4 mb-4">
-                        <h3 class="display-5 fw-bold text-dark">Fitur Unggulan</h3>
-                        <h5 class="fs-4 fw-bold text-dark">Dr. Leslie Taylor</h5>
+    <div id="unggulan" class="container" style="padding-top: 120px">
+        <!-- Fitur Unggulan -->
+        <h2 class="text-center mb-4">Fitur Unggulan</h2>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="V-CLAIM" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">V-CLAIM</h5>
+                            <p>Sistem klaim BPJS kesehatan secara daring.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                                <li>Dapat Dikirim Secara Manual (Mengurangi Beban Network): Kirim data secara manual jika ada kebutuhan khusus.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row col-md-8">
-                    <div class="border bg-light radius-10 p-4">
-                        <p>Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac
-                            penatibus et.</p>
-                        <p>Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac
-                            penatibus et.</p>
-                        <p>Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac
-                            penatibus et.</p>
-                        <p>Dolor sit amet, consectetur adipiscing elit. Dignissim massa diam elementum habitant fames ac
-                            penatibus et.</p>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="M-JKN" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">M-JKN</h5>
+                            <p>Aplikasi mobile Jaminan Kesehatan Nasional.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                                <li>Dapat Dikirim Secara Manual (Mengurangi Beban Network): Kirim data secara manual jika ada kebutuhan khusus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="APLICARES" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">APLICARES</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                                <li>Dapat Dikirim Secara Manual (Mengurangi Beban Network): Kirim data secara manual jika ada kebutuhan khusus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="I-CARE" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">I-CARE</h5>
+                            <p>Manajemen informasi rekam medis pasien.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                                <li>Dapat Dikirim Secara Manual (Mengurangi Beban Network): Kirim data secara manual jika ada kebutuhan khusus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Rekam Medis Elektronik" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Rekam Medis Elektronik (RME)</h5>
+                            <p>Pencatatan rekam medis berbasis digital.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                                <li>Dapat Menerima Output dari Alat Lab Secara Langsung: Aplikasi rekam medis elektronik RME berbasis web terintegrasi dengan perangkat medis, memungkinkan hasil tes laboratorium otomatis masuk ke sistem, meningkatkan akurasi dan efisiensi tanpa input manual.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+    <div id="umum"  class="container" style="padding-top: 150px">
+        <!-- Layanan Umum -->
+        <h2 class="text-center mb-4">Layanan Umum</h2>
+        <div class="row">
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Pencatatan Stok Alkes (Farmasi)</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Jadwal Praktek Dokter</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Antrian (Display Antrian dan Pemanggilan pasien)</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div class="card feature-card p-3 shadow-sm">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="{{asset('assets/images/post-item3.jpg')}}" alt="Layanan Umum" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="text-primary">Dashboard Kamar</h5>
+                            <p>Integrasi data fasilitas kesehatan.</p>
+                            <ul>
+                                <li>Informasi Real-Time: Data pasien dapat diperbarui dan dilihat secara real-time oleh dokter dan perawat, sehingga keputusan perawatan lebih tepat waktu.</li>
+                                <li>Dapat Dikirim Secara Periodik (Mengurangi Beban Network): Kirim data secara otomatis di waktu yang tepat tanpa membebani jaringan, lancar setiap saat.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection

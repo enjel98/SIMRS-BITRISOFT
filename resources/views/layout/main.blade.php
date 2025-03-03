@@ -18,7 +18,98 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Bootstrap 5.1.3 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+    <style>
+        .bg-primary-gradient {
+            background: linear-gradient(135deg, #0d6efd, #0a58ca);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: -40px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .section-heading {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #0d6efd, #0a58ca);
+            border-radius: 2px;
+        }
+
+        .hero-section {
+            padding: 6rem 0;
+        }
+
+        .card-img-top {
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .text-primary {
+            color: #0d6efd !important;
+        }
+
+        #unggulan, #umum {
+            scroll-margin-top: 25px;
+            padding-top: 100px;
+        }
+        #unggulan{
+            margin-top: 20px;
+        }
+    </style>
     <!-- script
       ================================================== -->
     <script src="{{asset('assets/js/modernizr.js')}}"></script>
@@ -115,85 +206,43 @@
     </symbol>
 </svg>
 
-<header id="header">
-    <nav class="header-top pt-4 pb-5">
+<header id="header" class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-5 col-md-4 col-sm-6">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="{{asset('assets/images/main-logo.png')}}" alt="" class="logo">
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-4 d-md-block d-sm-none">
-                    <ul class="contact-list d-flex justify-content-lg-end flex-wrap list-unstyled m-0">
-                        <li class="pe-5 pe-lg-0 pe-xxl-5 pb-3 pb-lg-0">
-                            <svg class="location primary-color" width="24" height="24">
-                                <use xlink:href="#location"></use>
-                            </svg>123 Arling, Miola, NY
-                        </li>
-                        <li class="ps-xl-3">
-                            <svg class="phone primary-color" width="24" height="24">
-                                <use xlink:href="#phone"></use>
-                            </svg>(+487) 384 9452
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="btn-book text-end">
-                        <a href="booking.html" class="btn btn-medium btn-outline-primary btn-pill text-uppercase">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <nav id="primary-header" nav class="navbar navbar-expand-lg shadow-none" aria-label="navbar" height="30">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-primary"
-                    aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
-                <svg class="navbar-icon mt-3 primary-color-500 bg-light" width="50" height="50">
-                    <use xlink:href="#navbar-icon"></use>
-                </svg>
+            <a class="navbar-brand" href="#">SIMRS BITRISOFT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="header-bottom collapse navbar-collapse bg-light border-radius-10 py-2" id="navbar-primary">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark active p-0 mt-3 mt-lg-0" aria-current="page" href="{{route('home')}}">Home</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownModul" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MODUL
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownModul">
+                            <li><a class="dropdown-item" href="#">Medical Record</a></li>
+                            <li><a class="dropdown-item" href="#">Rawat Jalan</a></li>
+                            <li><a class="dropdown-item" href="#">Rawat Inap</a></li>
+                            <!-- Tambahkan modul lainnya -->
+                        </ul>
                     </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#about-us">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('fitur-unggulan')}}#unggulan">FITUR UNGGULAN</a>
                     </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#our-services">Services</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('fitur-lainnya')}}#umum">FITUR LAINNYA</a>
                     </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#book-appointment">Booking</a>
-                    </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#our-team">Team</a>
-                    </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#faqs">Faqs</a>
-                    </li>
-                    <li class="nav-item ps-4 pe-4 border-right">
-                        <a class="nav-link text-dark p-0" href="#department">Department</a>
-                    </li>
-                    <li class="nav-item ps-4 pe-3 dropdown border-right">
-                        <a class="nav-link text-dark p-0 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                           aria-expanded="false">Pages<iconify-icon icon="iconamoon:arrow-down-2-fill"></iconify-icon> </a>
-                        <ul class="dropdown-menu">
-                            <li class="py-1"><a href="{{route('unggulan')}}" class="dropdown-item text-uppercase">Fitur Unggulan  </a></li>
-                            <li class="py-1"><a href="blog.html" class="dropdown-item text-uppercase">Blog </a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProduk" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PRODUK LAIN
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownProduk">
+                            <li><a class="dropdown-item" href="#">Aplikasi HRD</a></li>
+                            <li><a class="dropdown-item" href="#">Aplikasi Absen (PC & Mobile)</a></li>
+                            <li><a class="dropdown-item" href="#">Aplikasi SatuSehat</a></li>
                         </ul>
                     </li>
                 </ul>
-                <form class="search-form mb-3 mb-lg-0" role="search">
-                    <svg class="search primary-color position-absolute" width="18" height="18">
-                        <use xlink:href="#search"></use>
-                    </svg>
-                    <input class="form-control border-0 ps-4 position-relative" type="search" placeholder="Search.."
-                           aria-label="Search">
-                </form>
             </div>
         </div>
     </nav>
@@ -201,134 +250,36 @@
 
 @yield('content')
 
-<footer id="footer" class="overflow-hidden padding-large pb-0">
+<footer id="footer" class="bg-dark text-white py-4">
     <div class="container">
-        <div class="row d-flex flex-wrap justify-content-between">
-            <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
-                <div class="footer-menu">
-                    <img src="images/main-logo.png" alt="logo" class="pb-3">
-                    <p>Elit adipi massa diam in dignissim. Sagittis pulvinar ut dis venenatis nunc nunc.</p>
-                    <div class="contact-item">
-                        <p>
-                            <svg class="location primary-color" width="25" height="25">
-                                <use xlink:href="#location"></use>
-                            </svg>
-                            <span>123 Arling, Miola, NY</span>
-                        </p>
-                        <p>
-                            <svg class="email primary-color" width="25" height="25">
-                                <use xlink:href="#email"></use>
-                            </svg>
-                            <a href="mailto:">Info@yourinfo.com</a>
-                        </p>
-                        <p>
-                            <svg class="phone primary-color" width="25" height="25">
-                                <use xlink:href="#phone"></use>
-                            </svg>
-                            <span>(+487) 384 9452</span>
-                        </p>
-                        <ul class="social-links list-unstyled d-flex mt-3">
-                            <li>
-                                <a href="#">
-                                    <svg class="facebook text-primary-500 me-3" width="25" height="25">
-                                        <use xlink:href="#facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg class="twitter text-primary-500 me-3" width="25" height="25">
-                                        <use xlink:href="#twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg class="instagram text-primary-500 me-3" width="25" height="25">
-                                        <use xlink:href="#instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg class="youtube text-primary-500 me-3" width="25" height="25">
-                                        <use xlink:href="#youtube"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <svg class="linkedin text-primary-500" width="25" height="25">
-                                        <use xlink:href="#linkedin"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>SIMRS BITRISOFT</h5>
+                <p>Jl. Contoh No. 123, Kota Contoh, Indonesia</p>
+                <p>Email: info@simrsbitrisoft.com</p>
+                <p>Phone: +62 123 4567 890</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
-                <div class="footer-menu">
-                    <h5 class="widget-title pb-2 fw-semibold">Quick Links</h5>
-                    <ul class="menu-list list-unstyled">
-                        <li class="pb-2">
-                            <a href="#intro">Home</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#about-us">About</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#our-services">Services</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#book-appointment">Booking</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#testimonial">Testimonial</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#our-team">Our Team</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#faqs">Faqs</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#department">Department</a>
-                        </li>
-                        <li class="pb-2">
-                            <a href="#latest-blog">Blog</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="col-md-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#unggulan" class="text-white">Fitur Unggulan</a></li>
+                    <li><a href="#fitur" class="text-white">Fitur LAINNYA</a></li>
+                    <li><a href="#modul" class="text-white">Modul</a></li>
+                    <li><a href="#produk" class="text-white">Produk Lain</a></li>
+                </ul>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 pb-3">
-                <div class="footer-menu">
-                    <h5 class="widget-title fw-semibold">Opening Hours</h5>
-                    <table class="schedule">
-                        <tr class="d-flex justify-content-between border-bottom py-2">
-                            <td>Monday - Thursday</td>
-                            <td class="text-primary">8:00 am - 6:00 pm</td>
-                        </tr>
-                        <tr class="d-flex justify-content-between border-bottom py-2">
-                            <td>Friday - Saturday</td>
-                            <td class="text-primary">10:00 am - 4:00 pm</td>
-                        </tr>
-                        <tr class="d-flex justify-content-between border-bottom py-2">
-                            <td>Sunday</td>
-                            <td class="text-primary">Emergency only</td>
-                        </tr>
-                        <tr class="d-flex justify-content-between border-bottom py-2">
-                            <td>Personal</td>
-                            <td class="text-primary">7:00 pm - 9:00 pm</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="col-md-4">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Facebook</a></li>
+                    <li><a href="#" class="text-white">Twitter</a></li>
+                    <li><a href="#" class="text-white">Instagram</a></li>
+                    <li><a href="#" class="text-white">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
-        <div class="d-md-flex text-center justify-content-between border-top mt-5 py-4">
-            <p>© 2023 Insove - All rights reserved</p>
-            <p>Free HTML Templates by: <a href="https://templatesjungle.com/" class="fw-semibold"> TemplatesJungle</a></p>
+        <div class="text-center mt-3">
+            <p>&copy; 2023 SIMRS BITRISOFT. All rights reserved.</p>
         </div>
     </div>
 </footer>
@@ -339,6 +290,40 @@
 <script type="text/javascript" src="{{asset('assets/js/plugins.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap 5.1.3 JS Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const animateItems = document.querySelectorAll('.animate-on-scroll');
+
+        // Fungsi untuk menambahkan animasi saat elemen terlihat di viewport
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    observer.unobserve(entry.target); // Hentikan observasi setelah animasi dimulai
+                }
+            });
+        };
+
+        // Buat Intersection Observer
+        const observer = new IntersectionObserver(animateOnScroll, {
+            threshold: 0.1 // Trigger animasi saat 10% elemen terlihat
+        });
+
+        // Observasi setiap elemen dengan kelas animate-on-scroll
+        animateItems.forEach(item => {
+            observer.observe(item);
+        });
+    });
+</script>
+
+
 </body>
 
 </html>
